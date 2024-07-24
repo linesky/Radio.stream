@@ -28,7 +28,7 @@ def audio_stream():
     try:
         while True:
             data = stream.read(CHUNK, exception_on_overflow=False)
-            sio.emit('binaryData', data)
+            sio.emit('audio', data)
     except KeyboardInterrupt:
         pass
 
